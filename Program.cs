@@ -47,16 +47,16 @@ Inverser l’ordre des données de 2 manières différentes
 Quelle est la valeur minimale de la liste ?*/
 
             var MultiTrois = list.Where(f => f %3 == 0).Count();
-            Console.WriteLine(MultiTrois);
+            //Console.WriteLine(MultiTrois);
 
 
             var Sum = list.Where(f => f >20).Sum();
            
 
-                Console.WriteLine(Sum);
+               // Console.WriteLine(Sum);
 
             var Moyenne = list.Where(f => f % 3 == 0).Average();
-            Console.WriteLine(Moyenne);
+           // Console.WriteLine(Moyenne);
 
 
             var OrdreASC = list.OrderBy(f => f);
@@ -78,7 +78,21 @@ Quelle est la valeur minimale de la liste ?*/
 
             var valeurMin = list.Min(f => f);
 
-           // Console.WriteLine(valeurMin);
+            // Console.WriteLine(valeurMin);
+
+            var array1 = new int[] { 1, 2, 3, 4, 5 };
+            var array2 = new int[] { 6, 7, 8, 9, 10 };
+
+            var res = array1.Zip(array2, (l, n) => l + n); // fusionner deux tableau
+            foreach (var row in res)
+            {
+
+                 Console.WriteLine(row);
+            }
+
+
         }
+
+
     }
 }
